@@ -1,0 +1,70 @@
+<!-- A React components with props -->
+
+const Person = (props) => {
+    return (
+      <>
+      <h1>Name: {props.name}</h1>
+      <h1>Last: {props.last}</h1>
+      <h1>Age: {props.age}</h1>
+      </>
+    )
+  }
+  
+  const App = () => {
+    const name = 'Jennifer';
+    
+    
+    return (
+      <div className="App">
+        <h1>Hello, {name}!</h1>
+        <>{name}</>
+  
+        {/* Power of props */}
+        <Person 
+          name="Daniel" 
+          last = "Developer"
+          age = "Adult"
+        />
+        <Person 
+          name= "Sammuel" 
+          last ="Galaxy"
+          age = {33+6}
+        />
+        <Person 
+          name = {"Dennis"}
+          last = {"Omax"} 
+          age = {"31"}
+        />
+
+<!-- 3 most important things React offers -->
+1. components
+2. State
+3. Props
+
+        <!-- How to use React state  -->
+        <!-- How to use React useState hook -->
+        <!-- How to use React useEffect hook --> This is use to fetch data as soon as the page loads
+        <!--  -->
+        import { useState, useEffect } from 'react';
+
+        const App = () => {
+          const [counter, setCounter] = useState(0);
+          useEffect(() => {
+            setCounter(100);
+          }, []);
+          return (
+            <div className="App">
+              <button onClick={() => setCounter((PreCount) => PreCount - 1)}>-</button>
+             
+              <h1>{counter}</h1>
+              <button onClick={() => setCounter((PreCount) => PreCount + 1)}>+</button>
+              {/* <button onClick={() => setCounter((PreCount) => PreCount = 0)}>Reset</button> */}
+              
+              
+              
+            </div>
+          );
+        }
+        
+        export default App;
+        
